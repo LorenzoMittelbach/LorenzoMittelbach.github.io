@@ -1,0 +1,63 @@
+.qualificacoes {
+  background: #292929;
+}
+.qualificacoes-container {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+
+  padding-top: 100px;
+}
+.qualificacoes .subtitulo {
+  max-width: 5ch;
+}
+.qualificacao {
+  position: relative;
+  display: grid;
+  padding: 30px 80px 30px 40px;
+  background: #080808;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: #ccc;
+  text-align: start;
+  max-width: 31ch;
+  margin-bottom: 48px;
+  font-size: 1.5rem;
+}
+.qualificacao::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  top: 50px;
+  left: -12px;
+  background: url(/Portfolio/projeto-pessoal-arquivos/img/gradiente.svg);
+}
+.qualificacoes-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(/Portfolio/projeto-pessoal-arquivos/img/deco.svg) no-repeat
+    center;
+  position: absolute;
+  bottom: -50px;
+}
+@media (max-width: 800px) {
+  .qualificacoes-container {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    justify-content: center;
+  }
+  .qualificacoes .subtitulo {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .qualificacao::before {
+    left: 534px;
+  }
+}
